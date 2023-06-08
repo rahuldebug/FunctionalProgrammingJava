@@ -1,0 +1,4 @@
+rootProject.name = 'Functional-Programming-java'
+include 'src:main:lambdaexpression'
+findProject(':src:main:lambdaexpression')?.name = 'lambdaexpression'
+
