@@ -16,6 +16,7 @@ public class Student {
         this.rollNumber = rollNumber;
         this.activities = activities;
         this.grades = grades;
+        this.avgMarks=avgMarks;
     }
 
     public String getName() {

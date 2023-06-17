@@ -10,9 +10,11 @@ public class StudentDatabase {
     static Student manas= new Student("Manas",5, List.of("hockey", "reading"),"A", 90.01);
     static Student rahul= new Student("Rahul",6, List.of("beekeeping", "reading"),"A",90.22);
 
+    static Student xyz= new Student("XYZ",7,List.of("beekeeping", "reading"),"B",99);
+
 
     public static List<Student> getStudents(){
-        return List.of(rahul,ramesh,chiku,tiku,manas,suresh);
+        return List.of(rahul,ramesh,chiku,tiku,manas,suresh,xyz);
     }
 
 }
