@@ -5,7 +5,13 @@ import java.util.List;
 public class Student {
     String name;
 
-    public Student(String name, int rollNumber, List<String> activities, String grades) {
+    int rollNumber;
+
+    List<String> activities;
+    String grades;
+
+    double avgMarks;
+    public Student(String name, int rollNumber, List<String> activities, String grades , double avgMarks) {
         this.name = name;
         this.rollNumber = rollNumber;
         this.activities = activities;
@@ -18,6 +24,25 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public double getAvgMarks() {
+        return avgMarks;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNumber=" + rollNumber +
+                ", activities=" + activities +
+                ", grades='" + grades + '\'' +
+                ", avgMarks=" + avgMarks +
+                '}';
+    }
+
+    public void setAvgMarks(double avgMarks) {
+        this.avgMarks = avgMarks;
     }
 
     public int getRollNumber() {
@@ -44,18 +69,4 @@ public class Student {
         this.grades = grades;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", rollNumber=" + rollNumber +
-                ", activities=" + activities +
-                ", grades='" + grades + '\'' +
-                '}';
-    }
-
-    int rollNumber;
-
-    List<String> activities;
-    String grades;
 }
