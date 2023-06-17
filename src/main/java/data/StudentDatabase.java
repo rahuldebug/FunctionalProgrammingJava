@@ -11,7 +11,7 @@ public class StudentDatabase {
     static Student rahul= new Student("Rahul",6, List.of("beekeeping", "reading"),"A");
 
 
-    public static List<Student>getStudent(){
+    public static List<Student> getStudents(){
         return List.of(rahul,ramesh,chiku,tiku,manas,suresh);
     }
 

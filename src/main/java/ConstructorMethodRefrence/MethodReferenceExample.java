@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class MethodReferenceExample {
     public List<String> getNameOfStudents() {
-     return   StudentDatabase.getStudent()
+     return   StudentDatabase.getStudents()
                 .stream()
                 .map(Student::getName)
                 .collect(Collectors.toList());
