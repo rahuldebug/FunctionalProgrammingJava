@@ -1,6 +1,6 @@
 package FunctionalInterface;
 
-import FunctionalInterface.data.Student;
+import data.Student;
 
 import java.util.List;
 import java.util.function.Supplier;

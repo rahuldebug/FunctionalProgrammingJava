@@ -1,4 +1,4 @@
-package FunctionalInterface.data;
+package data;
 
 import java.util.List;
 
