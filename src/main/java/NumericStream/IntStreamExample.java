@@ -8,6 +8,7 @@ public class IntStreamExample {
     //this is used for primitive type
     //Double range and range closed is also there
     //range exclude last , range closed include last
+    //max , min , avg , sum can be utilised
     public static int getSumIntRange() {
         return IntStream.range(1, 100).sum();
 
