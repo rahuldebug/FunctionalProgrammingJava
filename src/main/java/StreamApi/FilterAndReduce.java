@@ -1,18 +1,18 @@
 package StreamApi;
 
 import data.Student;
-import data.StudentDatabase;
+import data.StudentRepository;
 
 public class FilterAndReduce {
     public static double getSum() {
-        return StudentDatabase.getStudents()
+        return StudentRepository.getStudents()
                 .stream()
                 .map(Student::getAvgMarks)
                 .reduce(0.0, (a, b) -> a + b);
     }
 
     public static double getSumSecondWay() {
-        return StudentDatabase.getStudents()
+        return StudentRepository.getStudents()
                 .stream()
                 .map(Student::getAvgMarks)
                 .reduce(0.0, Double::sum);

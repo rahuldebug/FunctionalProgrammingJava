@@ -1,33 +1,33 @@
 package StreamApi;
 
 import data.Student;
-import data.StudentDatabase;
+import data.StudentRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class MinMaxLimitSkip {
     public static double getMin() {
-        return StudentDatabase.getStudents().stream()
+        return StudentRepository.getStudents().stream()
                 .map(Student::getAvgMarks)
                 .reduce(Double.MAX_VALUE, Double::min);
     }
 
     public static double getMax() {
-        return StudentDatabase.getStudents().stream()
+        return StudentRepository.getStudents().stream()
                 .map(Student::getAvgMarks)
                 .reduce(Double.MAX_VALUE, Double::max);
     }
 
     public static List<Student> testLimit(){
-        return StudentDatabase.getStudents().stream()
+        return StudentRepository.getStudents().stream()
                 .limit(5)
                 //.map(Student::getAvgMarks)
                 .collect(Collectors.toList());
 
     }
     public static List<Student> testSkip(){
-        return StudentDatabase.getStudents().stream()
+        return StudentRepository.getStudents().stream()
                 .skip(2)
                 .collect(Collectors.toList());
     }

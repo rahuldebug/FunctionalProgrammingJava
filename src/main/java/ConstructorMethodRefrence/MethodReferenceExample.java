@@ -1,14 +1,14 @@
 package ConstructorMethodRefrence;
 
 import data.Student;
-import data.StudentDatabase;
+import data.StudentRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class MethodReferenceExample {
     public List<String> getNameOfStudents() {
-     return   StudentDatabase.getStudents()
+     return   StudentRepository.getStudents()
                 .stream()
                 .map(Student::getName)
                 .collect(Collectors.toList());
