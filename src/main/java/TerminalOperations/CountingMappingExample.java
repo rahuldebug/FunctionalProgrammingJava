@@ -16,12 +16,13 @@ public class CountingMappingExample {
         //this can be replaced by  //  .count();
 
     }
-    public List<String> toMap(){
+    public static List<String> toMap(){
         return StudentRepository.getStudents().stream()
                 .collect(Collectors.mapping(Student::getName,Collectors.toList()));
     }
 
     public static void main(String[] args) {
         System.out.println(countingTest());
+        System.out.println(toMap());
     }
 }
