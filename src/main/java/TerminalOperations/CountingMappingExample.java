@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 
 public class CountingMappingExample {
     public static double countingTest(){
-        return StudentRepository.getStudents().stream()
+        return StudentRepository.getStudents().parallelStream()
+                //.stream()
                 .map(Student::getAvgMarks)
                 .filter((m) -> m > 90)
                 .collect(Collectors.counting());
@@ -24,5 +25,6 @@ public class CountingMappingExample {
     public static void main(String[] args) {
         System.out.println(countingTest());
         System.out.println(toMap());
+        System.out.println(Runtime.getRuntime().availableProcessors());
     }
 }
