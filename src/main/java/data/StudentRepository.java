@@ -2,7 +2,7 @@ package data;
 
 import java.util.List;
 
-public class StudentRepository {
+public class StudentRepository  {
     static Student ramesh= new Student("Ramesh",1, List.of("cricket", "reading"),"A", 90.22);
     static Student suresh= new Student("Suresh",2, List.of("swimming", "reading"),"B",89);
     static Student tiku= new Student("Tiku",3, List.of("cricket", "running"),"A",98.11);
