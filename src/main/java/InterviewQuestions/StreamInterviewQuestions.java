@@ -1,5 +1,8 @@
 package InterviewQuestions;
 
+import data.Student;
+import data.StudentRepository;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -9,6 +12,7 @@ public class StreamInterviewQuestions {
         //sum
         System.out.println(alist.stream().reduce(Integer::sum).get());
         System.out.println(alist.stream().reduce((a,b)->a+b).get());
+        alist.stream().mapToInt(a->a).sum();
 
 
         //new list using map
@@ -23,24 +27,22 @@ public class StreamInterviewQuestions {
         System.out.println(alist.stream().mapToInt(e->e).average().getAsDouble());
 
 
-        //sum
-        alist.stream().mapToInt(a->a).sum();
-
-
         //filter , squared and converted
         alist.stream().filter(a->a%2==0).map(a->a*a).collect(Collectors.toList());
         alist.stream().filter(a->a%2==0).map(a->a*a).forEach(System.out::println);
 
 
         //fetch all the number starting with 2
-        alist.stream().map(e->String.valueOf(e))
+        alist.stream().map(String::valueOf)
                 .filter(e->e.charAt(0)=='2')
-                .map(e->Integer.valueOf(e))
+                .map(Integer::valueOf)
                 .forEach(System.out::println);
+
         //print duplicate values
         HashSet<Integer>duplicate= new HashSet<>();
         alist.stream().filter(e->duplicate.contains(e)).collect(Collectors.toList());
         alist.stream().filter(e->duplicate.contains(e)).forEach(System.out::println);
+        alist.stream().filter(e->duplicate.add(e)).forEach(System.out::println);
 
         //add also returns boolean , that could also have been used
 
@@ -67,7 +69,24 @@ public class StreamInterviewQuestions {
         System.out.println(alist.stream().distinct().sorted().skip(1).findFirst().get());
         System.out.println(alist.stream().distinct().sorted(Collections.reverseOrder()).skip(1).findFirst().get());
 
-        //comparator direct example and more of interview questions
+        //Runnable interface
+        Runnable runnable= ()->{
+            System.out.println("thread name::"+ Thread.currentThread().getName());
+        };
+        Thread t= new Thread(runnable);
+        t.start();
 
+
+        //student repo , converting to map
+       Map<Integer,String> mapResult= StudentRepository.getStudents()
+               .stream()
+               .collect(Collectors.toMap(Student::getRollNumber,Student::toString));
+       mapResult.forEach((k,v)->System.out.println(k+"   "+v));
+        //collectors and grouping by
+
+        //find 3rd heighest
+        System.out.println(alist.stream().sorted(Comparator.reverseOrder()).skip(2).findFirst().get());
+        alist.stream().sorted(Comparator.reverseOrder()).skip(2).limit(1).forEach(System.out::println);
+        //comparator direct example and more of interview questions
     }
 }
