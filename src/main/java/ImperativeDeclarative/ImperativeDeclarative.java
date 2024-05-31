@@ -10,7 +10,10 @@ public class ImperativeDeclarative {
         System.out.println(sum(100));
         System.out.println(sum2(100));
         List<Integer> l=Arrays.asList(1,1,2,3,3,4,4,5);
-        getDistict(l);
+        for (Integer i:getDistict(l)) {
+            System.out.print(i);
+        }
+
 
     }
 
