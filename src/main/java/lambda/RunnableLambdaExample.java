@@ -1,5 +1,7 @@
 package lambda;
-
+/*more on anonymous class vs lambda , who is more efficient and why
+* Comparator interface by anuj bhaiya
+* */
 public class RunnableLambdaExample {
 
     public static void main(String[] args) {
