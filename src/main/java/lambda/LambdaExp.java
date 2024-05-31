@@ -1,7 +1,7 @@
 package lambda;
 
 public class LambdaExp {
-    //adding line for git test
+    //to implement SAM (single abstract method ) , hence called anonymous method
     /* A method needs 4 things name ,return  type , input parameters and body
      int doStuff(int a){
      // do stuff
