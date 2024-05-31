@@ -14,7 +14,7 @@ public class ConsumerExample {
     }
 
     static Consumer<List<Student>> studentConsumer = (s) -> {
-        s.stream().forEach(System.out::println);
+        s.forEach(System.out::println);
     };
 
 

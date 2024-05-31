@@ -12,9 +12,7 @@ public class SupplierExample {
     static Supplier<Student> supplier = () -> {
         return new Student("name", 1, List.of("cricket"), "a", 55);
     };
-    static Supplier<List<Student>> supplyStudent = () -> {
-        return StudentRepository.getStudents();
-    };
+    static Supplier<List<Student>> supplyStudent = StudentRepository::getStudents;
 
     public static void main(String[] args) {
         System.out.println(supplier.get());
