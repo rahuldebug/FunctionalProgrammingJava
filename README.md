@@ -53,4 +53,4 @@
     it can be considered as conveyer belt for proicessing 
     data , From collection stream is created 
     which then is used to process data in declarative way 
-    
+     
