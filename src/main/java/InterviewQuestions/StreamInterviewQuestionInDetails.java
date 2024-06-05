@@ -19,6 +19,7 @@ public class StreamInterviewQuestionInDetails {
 //        System.out.println(getMin(aList).orElseThrow());
     }
 
+
     private static Optional<Integer> sum(List<Integer> aList) {
         //both can be used
         return aList.stream().reduce((a, b) -> a + b);
