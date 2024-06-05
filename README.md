@@ -34,7 +34,7 @@
     function
     * takes in one type and return another type
 
-}   
+   
 
 
 [Imperative and Declarative type of programming]
@@ -53,4 +53,26 @@
     it can be considered as conveyer belt for proicessing 
     data , From collection stream is created 
     which then is used to process data in declarative way 
-     
+    - Intermediate Operations
+      filter (predicate) , map(function) .
+    - Terminal Operations
+      Collectors.collect , sum , max , min etc
+
+[ Interview Questions ]
+
+      | Questions     | 
+      | ------------- |
+      | get max     | 
+      | get min     | 
+      | nth heighest number |
+      | sort in reverse order|
+      | sort in natural order |
+      | Range Sum |
+      |Duplicate numbers|
+
+All the related and more programs available under src
+[Features Introduced in Java 8 , java 11 , Java 17]
+[Todo]
+
+
+      
