@@ -2,9 +2,9 @@
 
 A method needs 4 things name ,return  type , input parameters and body
 
-int doStuff(int a){
- do stuff
- return c;
+int doStuff(int a){ 
+ do stuff 
+ return c; 
 }
 
 to implement SAM (single abstract method ) we don't need name,
