@@ -4,12 +4,14 @@ import data.Student;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StreamInterviewQuestionInDetails {
     public static void main(String[] args) {
         List<Integer> aList = Arrays.asList(1, 22, 22, 21, 2111, 21, 3, 4, 9, 7, 299);
         List<Integer> aList2 = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
-        nLargest(aList2,3);
+        //nLargest(aList2,3);
+        getAlternate(aList);
 //        int result = sum(aList).orElseThrow();
 //        System.out.println(result);
 //        double average = avg(aList);
@@ -119,6 +121,12 @@ public class StreamInterviewQuestionInDetails {
     public static void nLargest(List<Integer> aList ,int n){
 
         aList.stream().sorted(Comparator.reverseOrder()).skip(n-1).limit(1).forEach(System.out::println);
+    }
+    public static void getAlternate(List<Integer>aList){
+        IntStream.range(0, aList.size())
+                .filter(i->i%2==0)
+                .map(i->aList.get(i))
+                .forEach(System.out::println);
     }
 
 }
