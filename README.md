@@ -74,10 +74,11 @@ All the related and more programs available under src
 [Features Introduced in Java 8 , java 11 , Java 17]
 [Todo]
 
-Markdown | Less | Pretty
---- | --- | ---
+To be continued | topics    | tocover
+--- |-----------| ---
 *Still* | `renders` | **nicely**
-1 | 2 | 3
+1 | 2         | 3
+jvm| j-11      |j17
 
 
       
