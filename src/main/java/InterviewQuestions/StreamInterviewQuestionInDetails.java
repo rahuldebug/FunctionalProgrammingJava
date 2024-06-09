@@ -3,6 +3,7 @@ package InterviewQuestions;
 import data.Student;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -127,6 +128,12 @@ public class StreamInterviewQuestionInDetails {
                 .filter(i->i%2==0)
                 .map(i->aList.get(i))
                 .forEach(System.out::println);
+    }
+    public static Map<Integer, Long> countOccurence(List<Integer>aList){
+
+        return aList.stream()
+                .collect(Collectors.groupingBy(i->i,
+                        Collectors.counting()));
     }
 
 }
