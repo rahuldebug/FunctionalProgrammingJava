@@ -27,7 +27,7 @@ public class Calculator {
                         "width": 500,
                         "height": 500
                     },
-                    "image": {\s
+                    "image": {
                         "src": "Images/Sun.png",
                         "name": "sun1",
                         "hOffset": 250,
@@ -46,7 +46,7 @@ public class Calculator {
                     }
                 }}
                 """;
-        if (text instanceof String) System.out.println("text instance od string");
+        if (text instanceof String){System.out.println("text instance od string");}
         return text;
     }
 }
