@@ -3,6 +3,24 @@ package data;
 import java.util.List;
 
 public class Student {
+    public String getEmail() {
+        return email;
+    }
+
+    public Student(String email, String name, int rollNumber, List<String> activities, String grades, double avgMarks) {
+        this.email = email;
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.activities = activities;
+        this.grades = grades;
+        this.avgMarks = avgMarks;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    String email;
     String name;
 
     int rollNumber;
@@ -11,13 +29,13 @@ public class Student {
     String grades;
 
     double avgMarks;
-    public Student(String name, int rollNumber, List<String> activities, String grades , double avgMarks) {
-        this.name = name;
-        this.rollNumber = rollNumber;
-        this.activities = activities;
-        this.grades = grades;
-        this.avgMarks=avgMarks;
-    }
+//    public Student(String name, int rollNumber, List<String> activities, String grades , double avgMarks) {
+//        this.name = name;
+//        this.rollNumber = rollNumber;
+//        this.activities = activities;
+//        this.grades = grades;
+//        this.avgMarks=avgMarks;
+//    }
 
     public String getName() {
         return name;
