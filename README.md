@@ -71,7 +71,8 @@
       |Duplicate numbers|
 
 All the related and more programs available under src
-[Features Introduced in Java 8 , java 11 , Java 17]
+[Features Introduced in Java 8 to java 14 , and Java 17]
+
 [Todo]
 
 To be continued | topics    | tocover
