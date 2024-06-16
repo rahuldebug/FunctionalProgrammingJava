@@ -29,6 +29,13 @@ public class EpamInterviewQuestions {
 
 
     }
+    private static List<String> Capitalizer(List<String> aList) {
+        return aList.stream()
+                .map(e -> {
+                    return e.substring(0, 1).toUpperCase() + e.substring(1, e.length());
+                })
+                .collect(Collectors.toList());
+    }
 
 
 }
