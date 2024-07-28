@@ -20,6 +20,12 @@
     it can only be employed for SAM (single abstract method )
     we will also go with difference between SAM and anonymous class.
 
+[ Function as first class citizen ]
+
+    function now (from java 8) has become first class citizen , 
+    the can assigned to variables , passed as parameters and so on .
+    
+
 [Four New Functional Interfaces]
 
     consumer
@@ -57,6 +63,32 @@
       filter (predicate) , map(function) .
     - Terminal Operations
       Collectors.collect , sum , max , min etc
+[Stream Api's Methods ]
+        
+        reduce== identity (initial value ) + Accumulator + Combiner
+
+        Example:- 
+
+        here method reference could have been used for simplification 
+        int sumV = aList.stream().reduce(0, (sum, element) -> sum + element);
+        System.out.println(sumV);
+
+        stream() method on the list to get a stream of values from the list
+
+        mapToInt(value -> value) on the stream to get an Integer Stream
+
+        max, min and sum to method on the stream to get the max value , 
+        if used without converting to int stream need comparator for the same .
+
+        orElseThrow() to throw an exception if no value is received 
+
+
+
+[Date and Time API ]
+
+[Preexisting Functional Interfaces]
+
+
 
 [ Interview Questions ]
 
@@ -69,6 +101,9 @@
       | sort in natural order |
       | Range Sum |
       |Duplicate numbers|
+
+
+[more interview questions and explanations ]
 
 All the related and more programs available under src
 [Features Introduced in Java 8 to java 14 , and Java 17]
